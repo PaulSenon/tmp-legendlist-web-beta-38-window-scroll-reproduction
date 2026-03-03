@@ -2,11 +2,14 @@
 
 Minimal reproduction of legendlist web beta 38 with window scroll.
 
+> [!NOTE]
+> Now solved by beta 40 !!!
+
 ## Demos
 
 1. **Working case** (`/scroll-container-demo`) - using scroll container, not window scroll
-2. **Broken case** (`/window-scroll-demo`) - using window scroll
-3. **Hacked version** (`/window-scroll-hacked-demo`) - fully hacked version to make it barely work
+2. ~~**Broken case**~~ **Also working**  (`/window-scroll-demo`) - using window scroll
+3. ~~Hacked version** (/window-scroll-hacked-demo) - fully hacked version to make it barely work~~
 
 ## References
 

@@ -5,11 +5,11 @@ export const Route = createFileRoute("/")({ component: App });
 function App() {
   return (
     <main className="page-wrap px-4 pb-8 pt-14 prose prose-invert">
-      <h1>Legendlist Web Beta 38 - Minimal Reproduction</h1>
+      <h1> [SOLVED] Legendlist Web Beta 38 - Minimal Reproduction</h1>
 
       <p>
         This is a minimal reproduction of legendlist web beta 38 with window
-        scroll.
+        scroll. NOW SOLVED BY BETA 40
       </p>
 
       <h2>References</h2>
@@ -26,7 +26,7 @@ function App() {
         </li>
       </ul>
 
-      <p>Please use sidebar to check the 3 demos:</p>
+      <p>Please use sidebar to check the 2 demos:</p>
 
       <ol>
         <li>
@@ -37,15 +37,9 @@ function App() {
         </li>
         <li>
           <strong>
-            <Link to="/window-scroll-demo">Broken case</Link>
+            <Link to="/window-scroll-demo"> Broken case (now FIXED)</Link>
           </strong>{" "}
           - using window scroll
-        </li>
-        <li>
-          <strong>
-            <Link to="/window-scroll-hacked-demo">Hacked version</Link>
-          </strong>{" "}
-          - fully hacked version of the second one to make it barely work
         </li>
       </ol>
     </main>
