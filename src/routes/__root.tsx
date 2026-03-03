@@ -31,14 +31,7 @@ function RootComponent() {
               className="text-white hover:underline block p-1"
               activeProps={{ className: "bg-gray-700" }}
             >
-              [KO] window scroll demo
-            </Link>
-            <Link
-              to="/window-scroll-hacked-demo"
-              className="text-white hover:underline block p-1"
-              activeProps={{ className: "bg-gray-700" }}
-            >
-              [~OK]window scroll hacked demo
+              [OK] window scroll demo
             </Link>
           </nav>
         </aside>
