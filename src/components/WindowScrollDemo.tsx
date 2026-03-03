@@ -50,6 +50,8 @@ export function WindowScrollDemo() {
             <div style={{ color: "#475569", fontSize: 14 }}>{item.text}</div>
           </button>
         )}
+        maintainVisibleContentPosition
+        recycleItems
         style={styles.list}
         useWindowScroll
       />
@@ -61,7 +63,7 @@ export function WindowScrollDemo() {
         >
           <svg
             aria-hidden="true"
-            fill="red"
+            fill="none"
             height="18"
             viewBox="0 0 24 24"
             width="18"
@@ -74,15 +76,7 @@ export function WindowScrollDemo() {
             />
           </svg>
         </button>
-      ) : (
-        <button
-          onClick={scrollAtEnd}
-          className="fixed bottom-0 bg-black p-5 rounded-full"
-          type="button"
-        >
-          fallback btn
-        </button>
-      )}
+      ) : null}
     </div>
   );
 }

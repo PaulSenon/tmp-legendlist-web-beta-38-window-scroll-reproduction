@@ -12,14 +12,7 @@ function Demo1() {
         <h3>Window scroll demo</h3>
         <div>
           <p>
-            This one should init at bottom position (broken, not perfectly at
-            bottom), have scroll to bottom button showing up when not bottom
-            (broken, never showing), and have it smooth scroll to bottom when
-            clicked (broken, it's scrolling instant and at start).
-          </p>
-          <p>
-            because we cannot test scroll top button if never showing, I show
-            here a "fallback btn" that does the same scroll end action
+            Now everything also work here yayy :) everything solved in beta-40
           </p>
         </div>
       </div>
