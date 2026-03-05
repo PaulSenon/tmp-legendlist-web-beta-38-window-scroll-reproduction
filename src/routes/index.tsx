@@ -5,41 +5,41 @@ export const Route = createFileRoute("/")({ component: App });
 function App() {
   return (
     <main className="page-wrap px-4 pb-8 pt-14 prose prose-invert">
-      <h1> [SOLVED] Legendlist Web Beta 38 - Minimal Reproduction</h1>
+      <h1>Legendlist Web Beta 40 - Minimal Reproduction</h1>
 
       <p>
-        This is a minimal reproduction of legendlist web beta 38 with window
-        scroll. NOW SOLVED BY BETA 40
+        This is a minimal reproduction of legendlist web beta-40 showing a bug
+        when lazyloading big content on start reached. But is present on both
+        windowScroll or scrollContainer setups.
       </p>
 
       <h2>References</h2>
       <ul>
         <li>
-          <a href="https://github.com/LegendApp/legend-list/issues/404">
-            GitHub issue
-          </a>
-        </li>
-        <li>
-          <a href="https://x.com/isaaacdotdev/status/2027396762835513408">
-            Twitter thread
-          </a>
+          <a href="">GitHub issue</a>
         </li>
       </ul>
 
-      <p>Please use sidebar to check the 2 demos:</p>
+      <p>Please use sidebar to of follow the link below</p>
 
       <ol>
         <li>
           <strong>
-            <Link to="/scroll-container-demo">Working case</Link>
+            <Link to="/window-scroll-jump-bug-demo" search={{ level: 2 }}>
+              {" "}
+              [KO] WindowScroll Scroll jump demo
+            </Link>
           </strong>{" "}
-          - using scroll container, not window scroll
+          - using window scroll
         </li>
         <li>
           <strong>
-            <Link to="/window-scroll-demo"> Broken case (now FIXED)</Link>
+            <Link to="/scroll-container-jump-bug-demo" search={{ level: 2 }}>
+              {" "}
+              [KO] ScrollContainer Scroll jump demo
+            </Link>
           </strong>{" "}
-          - using window scroll
+          - using scroll container
         </li>
       </ol>
     </main>

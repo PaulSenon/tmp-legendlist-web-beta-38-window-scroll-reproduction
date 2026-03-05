@@ -7,10 +7,27 @@ const copyVariants = [
   "Long variant with punctuation and structure. First, it adds detail. Second, it continues with additional context about list behavior under dynamic content. Third, it closes with one more sentence to force a clearly taller cell.",
 ];
 
-export type SimpleItem = { id: string; text: string };
+export type SimpleItem = {
+  id: string;
+  text: string;
+  metadata: Record<string, unknown>;
+  debugColor: string;
+};
 
-export const generateItems = (count: number, startIndex = 0): SimpleItem[] =>
-  Array.from({ length: count }, (_, i) => ({
+const debugColors = ["red", "purple", "green", "blue"];
+
+export const generateItems = (
+  count: number,
+  options?: {
+    sizeMultiplicator?: number;
+  },
+): SimpleItem[] => {
+  const startIndex = Date.now();
+  const { sizeMultiplicator = 1 } = options ?? {};
+  return Array.from({ length: count }, (_, i) => ({
     id: String(startIndex + i),
-    text: copyVariants[i % copyVariants.length],
+    text: copyVariants[i % copyVariants.length].repeat(sizeMultiplicator),
+    metadata: {},
+    debugColor: i === 0 ? "black" : debugColors[i % debugColors.length],
   }));
+};

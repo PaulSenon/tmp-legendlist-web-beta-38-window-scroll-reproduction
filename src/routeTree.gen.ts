@@ -9,11 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WindowScrollJumpBugDemoRouteImport } from './routes/window-scroll-jump-bug-demo'
 import { Route as WindowScrollHackedDemoRouteImport } from './routes/window-scroll-hacked-demo'
 import { Route as WindowScrollDemoRouteImport } from './routes/window-scroll-demo'
+import { Route as ScrollContainerJumpBugDemoRouteImport } from './routes/scroll-container-jump-bug-demo'
 import { Route as ScrollContainerDemoRouteImport } from './routes/scroll-container-demo'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WindowScrollJumpBugDemoRoute = WindowScrollJumpBugDemoRouteImport.update({
+  id: '/window-scroll-jump-bug-demo',
+  path: '/window-scroll-jump-bug-demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WindowScrollHackedDemoRoute = WindowScrollHackedDemoRouteImport.update({
   id: '/window-scroll-hacked-demo',
   path: '/window-scroll-hacked-demo',
@@ -24,6 +31,12 @@ const WindowScrollDemoRoute = WindowScrollDemoRouteImport.update({
   path: '/window-scroll-demo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ScrollContainerJumpBugDemoRoute =
+  ScrollContainerJumpBugDemoRouteImport.update({
+    id: '/scroll-container-jump-bug-demo',
+    path: '/scroll-container-jump-bug-demo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ScrollContainerDemoRoute = ScrollContainerDemoRouteImport.update({
   id: '/scroll-container-demo',
   path: '/scroll-container-demo',
@@ -38,52 +51,73 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/scroll-container-demo': typeof ScrollContainerDemoRoute
+  '/scroll-container-jump-bug-demo': typeof ScrollContainerJumpBugDemoRoute
   '/window-scroll-demo': typeof WindowScrollDemoRoute
   '/window-scroll-hacked-demo': typeof WindowScrollHackedDemoRoute
+  '/window-scroll-jump-bug-demo': typeof WindowScrollJumpBugDemoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/scroll-container-demo': typeof ScrollContainerDemoRoute
+  '/scroll-container-jump-bug-demo': typeof ScrollContainerJumpBugDemoRoute
   '/window-scroll-demo': typeof WindowScrollDemoRoute
   '/window-scroll-hacked-demo': typeof WindowScrollHackedDemoRoute
+  '/window-scroll-jump-bug-demo': typeof WindowScrollJumpBugDemoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/scroll-container-demo': typeof ScrollContainerDemoRoute
+  '/scroll-container-jump-bug-demo': typeof ScrollContainerJumpBugDemoRoute
   '/window-scroll-demo': typeof WindowScrollDemoRoute
   '/window-scroll-hacked-demo': typeof WindowScrollHackedDemoRoute
+  '/window-scroll-jump-bug-demo': typeof WindowScrollJumpBugDemoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/scroll-container-demo'
+    | '/scroll-container-jump-bug-demo'
     | '/window-scroll-demo'
     | '/window-scroll-hacked-demo'
+    | '/window-scroll-jump-bug-demo'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/scroll-container-demo'
+    | '/scroll-container-jump-bug-demo'
     | '/window-scroll-demo'
     | '/window-scroll-hacked-demo'
+    | '/window-scroll-jump-bug-demo'
   id:
     | '__root__'
     | '/'
     | '/scroll-container-demo'
+    | '/scroll-container-jump-bug-demo'
     | '/window-scroll-demo'
     | '/window-scroll-hacked-demo'
+    | '/window-scroll-jump-bug-demo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ScrollContainerDemoRoute: typeof ScrollContainerDemoRoute
+  ScrollContainerJumpBugDemoRoute: typeof ScrollContainerJumpBugDemoRoute
   WindowScrollDemoRoute: typeof WindowScrollDemoRoute
   WindowScrollHackedDemoRoute: typeof WindowScrollHackedDemoRoute
+  WindowScrollJumpBugDemoRoute: typeof WindowScrollJumpBugDemoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/window-scroll-jump-bug-demo': {
+      id: '/window-scroll-jump-bug-demo'
+      path: '/window-scroll-jump-bug-demo'
+      fullPath: '/window-scroll-jump-bug-demo'
+      preLoaderRoute: typeof WindowScrollJumpBugDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/window-scroll-hacked-demo': {
       id: '/window-scroll-hacked-demo'
       path: '/window-scroll-hacked-demo'
@@ -96,6 +130,13 @@ declare module '@tanstack/react-router' {
       path: '/window-scroll-demo'
       fullPath: '/window-scroll-demo'
       preLoaderRoute: typeof WindowScrollDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scroll-container-jump-bug-demo': {
+      id: '/scroll-container-jump-bug-demo'
+      path: '/scroll-container-jump-bug-demo'
+      fullPath: '/scroll-container-jump-bug-demo'
+      preLoaderRoute: typeof ScrollContainerJumpBugDemoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/scroll-container-demo': {
@@ -118,8 +159,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ScrollContainerDemoRoute: ScrollContainerDemoRoute,
+  ScrollContainerJumpBugDemoRoute: ScrollContainerJumpBugDemoRoute,
   WindowScrollDemoRoute: WindowScrollDemoRoute,
   WindowScrollHackedDemoRoute: WindowScrollHackedDemoRoute,
+  WindowScrollJumpBugDemoRoute: WindowScrollJumpBugDemoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
