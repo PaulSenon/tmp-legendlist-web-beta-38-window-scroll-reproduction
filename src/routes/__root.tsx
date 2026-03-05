@@ -15,27 +15,30 @@ function RootComponent() {
             <Link
               to="/"
               className="text-white hover:underline block p-1"
-              activeProps={{ className: "bg-gray-700" }}
+              activeProps={{ className: "bg-gray-900" }}
             >
               Home
             </Link>
+
             <Link
-              to="/scroll-container-demo"
-              className="text-white hover:underline block p-1"
-              activeProps={{ className: "bg-gray-700" }}
+              to="/window-scroll-jump-bug-demo"
+              className="text-red-400 hover:underline block p-1"
+              activeProps={{ className: "bg-gray-900" }}
+              search={{ level: 1 }}
             >
-              [OK] scroll container demo
+              [KO] window scroll jump issue
             </Link>
             <Link
-              to="/window-scroll-demo"
-              className="text-white hover:underline block p-1"
-              activeProps={{ className: "bg-gray-700" }}
+              to="/scroll-container-jump-bug-demo"
+              className="text-red-400 hover:underline block p-1"
+              activeProps={{ className: "bg-gray-900" }}
+              search={{ level: 1 }}
             >
-              [OK] window scroll demo
+              [KO] container scroll jump issue
             </Link>
           </nav>
         </aside>
-        <main className="w-lg m-auto">
+        <main className="flex min-h-0 flex-col grow">
           <Outlet />
         </main>
       </div>
