@@ -186,7 +186,8 @@ function Demo1() {
     async (value: number) => {
       startTransition(() => _setSizeMultiplicator(value));
       await navigate({
-        search: { level: value },
+        to: ".",
+        search: (prev) => ({ ...prev, level: value }),
         replace: true,
       });
     },
