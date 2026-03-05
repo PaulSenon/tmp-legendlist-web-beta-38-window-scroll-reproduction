@@ -16,7 +16,9 @@ function App() {
       <h2>References</h2>
       <ul>
         <li>
-          <a href="">GitHub issue</a>
+          <a href="https://github.com/LegendApp/legend-list/issues/409">
+            GitHub issue
+          </a>
         </li>
       </ul>
 
