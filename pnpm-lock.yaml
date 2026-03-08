@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@legendapp/list':
-        specifier: 3.0.0-beta.40
-        version: 3.0.0-beta.40(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 3.0.0-beta.41
+        version: 3.0.0-beta.41(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@tailwindcss/vite':
         specifier: ^4.1.18
         version: 4.2.1(vite@7.3.1(@types/node@22.19.13)(jiti@2.6.1)(lightningcss@1.31.1)(tsx@4.21.0)(yaml@2.8.2))
@@ -416,8 +416,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@legendapp/list@3.0.0-beta.40':
-    resolution: {integrity: sha512-UUNW5BPw2a0MNQMUul+vVZCwXL4mnMhsFEK7emJw3iUZPCwDSndgcRXBAvSrMRE+HLMKKEWG+w2pPvNpX07lmA==}
+  '@legendapp/list@3.0.0-beta.41':
+    resolution: {integrity: sha512-m/wxzotZDE2z9Wh/l8LkLpKNydbc+nOgXm2Ao6yxYv3Rml8go+IdaPzHz4PsLplzWdSS3fOz5omKIxnBC6B9Cw==}
     peerDependencies:
       react: '*'
       react-dom: '*'
@@ -2153,7 +2153,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@legendapp/list@3.0.0-beta.40(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@legendapp/list@3.0.0-beta.41(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       react: 19.2.4
       use-sync-external-store: 1.6.0(react@19.2.4)
